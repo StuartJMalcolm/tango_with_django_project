@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% load staticfiles %}
+
 <html>
 	<head>
 		<title>About</title>
@@ -12,8 +14,9 @@
 			This tutorial has been put together by Stuart.<br />
 		</div>
 		<div>
-			<a href="/rango/index/">Index</a><br />
-			<img src="media/cat.jpg" alt="Picture of a cat" />
+			<a href="/rango/">Index</a><br />
+			<img src="{% static 'images/rango.jpg' %}" alt="Picture of Django" height="130px;" />
+			<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a cat" height="130px"/>
 		</div>
 
 	</body>

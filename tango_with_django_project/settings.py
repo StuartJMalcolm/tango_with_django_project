@@ -74,9 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
-MEDIA_ROOT = MEDIA_DIR
-MEDIA_URL = '/media/'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -127,3 +124,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
+
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
