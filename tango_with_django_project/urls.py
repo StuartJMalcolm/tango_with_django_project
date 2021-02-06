@@ -23,5 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.index, name='index'),
     path('rango/', include('rango.urls')), #maps any URLs starting with "rango/" to be handled by rango
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),path('category/<slug:category_name_slug>/', views.show_category, name='show_category'),
+    path('add_category/', views.add_category, name='add_category'),
+    path('rango/category/<slug:category_name_slug>/add_page/', views.add_page, name='add_page'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
